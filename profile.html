@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile • Socialize</title>
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <img src="assets/instagram-logo.png" alt="Instagram" class="brand-img">
+            <div class="nav-items">
+                <i class="fas fa-home"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <div class="profile-pic">
+                    <img src="assets/default-profile.jpg" alt="profile">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="profile-header">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="assets/default-profile.jpg" alt="profile">
+                </div>
+                <div class="profile-info">
+                    <div class="profile-meta">
+                        <h1 class="profile-username">username</h1>
+                        <button class="edit-profile">Edit Profile</button>
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <div class="profile-stats">
+                        <span><strong>0</strong> posts</span>
+                        <span><strong>0</strong> followers</span>
+                        <span><strong>0</strong> following</span>
+                    </div>
+                    <div class="profile-bio">
+                        <h1 class="profile-name">Display Name</h1>
+                        <p class="bio-text">Your bio goes here...</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="profile-content">
+            <div class="content-tabs">
+                <button class="tab active"><i class="fas fa-th"></i> POSTS</button>
+                <button class="tab"><i class="fas fa-tv"></i> REELS</button>
+                <button class="tab"><i class="far fa-bookmark"></i> SAVED</button>
+                <button class="tab"><i class="fas fa-tag"></i> TAGGED</button>
+            </div>
+
+            <div class="posts-grid">
+                <!-- Posts will be added dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

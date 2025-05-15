@@ -1,0 +1,285 @@
+/* Import common styles */
+@import 'home.css';
+
+/* Dark theme variables (add at the top of the file) */
+:root {
+    --bg-color: #fafafa;
+    --text-color: #262626;
+    --border-color: #dbdbdb;
+    --card-bg: #fff;
+    --secondary-text: #8e8e8e;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000;
+    --text-color: #fff;
+    --border-color: #363636;
+    --card-bg: #121212;
+    --secondary-text: #8e8e8e;
+}
+
+/* Update existing profile styles to use variables */
+.profile-header {
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-bg);
+}
+
+.profile-username, .profile-name {
+    color: var(--text-color);
+}
+
+.bio-text {
+    color: var(--text-color);
+}
+
+.edit-profile {
+    border-color: var(--border-color);
+    color: var(--text-color);
+    background: var(--card-bg);
+}
+
+.tab {
+    color: var(--secondary-text);
+}
+
+.tab.active {
+    color: var(--text-color);
+    border-top-color: var(--text-color);
+}
+
+.edit-modal .modal-content {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.edit-modal input,
+.edit-modal textarea {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.profile-container {
+    max-width: 975px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-username {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+.edit-profile {
+    background: transparent;
+    border: 1px solid #dbdbdb;
+    color: #262626;
+    border-radius: 4px;
+    padding: 5px 9px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 40px;
+}
+
+.profile-stats span {
+    font-size: 16px;
+}
+
+.profile-name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.bio-text {
+    font-size: 16px;
+    white-space: pre-line;
+}
+
+.content-tabs {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #dbdbdb;
+    margin-top: 40px;
+}
+
+.tab {
+    border: none;
+    background: none;
+    padding: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #8e8e8e;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-top: 1px solid transparent;
+    margin-top: -1px;
+}
+
+.tab.active {
+    color: #262626;
+    border-top: 1px solid #262626;
+}
+
+.tab i {
+    margin-right: 6px;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 20px;
+    max-width: 975px;
+    margin: 0 auto;
+}
+
+.post-item {
+    aspect-ratio: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.post-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.post-item:hover .post-overlay {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-stats {
+        gap: 20px;
+    }
+}
+
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.modal-content textarea {
+    height: 100px;
+    resize: none;
+}
+
+.modal-content button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.modal-content button[type="submit"] {
+    background: #0095f6;
+    color: white;
+    margin-right: 8px;
+}
+
+.modal-content .cancel {
+    background: transparent;
+    color: #262626;
+}
+
+.post-stats {
+    color: white;
+    display: flex;
+    gap: 30px;
+}
+
+.post-stats span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}

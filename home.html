@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socialize</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-wrapper">
+            <img src="assets/instagram-logo.png" alt="Instagram" class="brand-img">
+            <div class="nav-items">
+                <i class="fas fa-home"></i>
+                <i class="far fa-plus-square" id="create-post-btn"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <i class="fas fa-moon" id="theme-toggle"></i>
+                <div class="profile-pic">
+                    <img src="assets/default-profile.jpg" alt="profile">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <div class="left-col">
+                <!-- Stories -->
+                <div class="stories">
+                    <div class="story">
+                        <div class="profile-pic"><img src="assets/default-profile.jpg" alt=""></div>
+                        <p class="username">Your Story</p>
+                    </div>
+                    <!-- More stories will be added dynamically -->
+                </div>
+
+                <!-- Posts -->
+                <div class="posts">
+                    <div class="post">
+                        <div class="post-header">
+                            <div class="profile-pic">
+                                <img src="assets/default-profile.jpg" alt="">
+                            </div>
+                            <p class="username">username</p>
+                            <i class="fas fa-ellipsis-h options"></i>
+                        </div>
+                        <img src="assets/post1.jpg" class="post-image" alt="post">
+                        <div class="post-content">
+                            <div class="reaction-wrapper">
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="far fa-paper-plane"></i>
+                                <i class="far fa-bookmark save"></i>
+                            </div>
+                            <p class="likes">1,012 likes</p>
+                            <p class="description"><span>username </span>This is a post description</p>
+                            <p class="post-time">2 minutes ago</p>
+                        </div>
+                        <div class="comment-wrapper">
+                            <i class="far fa-smile"></i>
+                            <input type="text" class="comment-box" placeholder="Add a comment...">
+                            <button class="comment-btn">post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-col">
+                <!-- User Profile -->
+                <div class="profile-card">
+                    <div class="profile-pic">
+                        <img src="assets/default-profile.jpg" alt="">
+                    </div>
+                    <div>
+                        <p class="username">username</p>
+                        <p class="sub-text">Welcome</p>
+                    </div>
+                    <button class="switch">switch</button>
+                </div>
+
+                <!-- Suggestions -->
+                <div class="suggestion-box">
+                    <p class="suggestion-title">Suggestions for you</p>
+                    <!-- Suggestions will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/home.js"></script>
+</body>
+</html>
